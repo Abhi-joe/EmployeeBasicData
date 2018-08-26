@@ -3,6 +3,8 @@
  */
 package com.employee.basic.DAO;
 
+import javax.annotation.Resource;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.employee.basic.entity.EmployeeEntity;
@@ -14,6 +16,7 @@ import com.employee.basic.entity.EmployeeEntity;
  * @author Abhi
  *
  */
+@Resource
 public interface EmployeeBasicDataDAO extends CrudRepository<EmployeeEntity, String> {
 
 }

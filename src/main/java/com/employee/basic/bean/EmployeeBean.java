@@ -1,53 +1,41 @@
 /**
  * 
  */
-package com.employee.basic.entity;
+package com.employee.basic.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 /**
- * Entity clas for Employee's basic data
- * 
  * @author Abhi
  *
  */
-@Entity
-@Table(name = "EmployeeData")
-public class EmployeeEntity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+public class EmployeeBean implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 	private int empId;
-	@Column(name = "firstname")
 	private String firstName;
-	@Column(name = "middlename")
 	private String middleName;
-	@Column(name = "lastname")
 	private String lastName;
-	@Column(name = "fathersname")
 	private String fathersName;
-	@Column(name = "mothersname")
 	private String mothersName;
-	@Column(name = "ismarried")
 	private boolean married;
 	/*
 	 * @Column(name="dob") private Date dateOfBirth;
 	 */
-	@Column(name = "age")
 	private int age;
-	@Column(name = "bloodgroup")
 	private String bloodGroup;
 
 	/**
 	 * 
 	 */
-	public EmployeeEntity() {
+	public EmployeeBean() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -59,12 +47,11 @@ public class EmployeeEntity {
 	 * @param fathersName
 	 * @param mothersName
 	 * @param married
-	 * @param dateOfBirth
 	 * @param age
 	 * @param bloodGroup
 	 */
-	public EmployeeEntity(int empId, String firstName, String middleName, String lastName, String fathersName,
-			String mothersName, boolean married, Date dateOfBirth, int age, String bloodGroup) {
+	public EmployeeBean(int empId, String firstName, String middleName, String lastName, String fathersName,
+			String mothersName, boolean married, int age, String bloodGroup) {
 		super();
 		this.empId = empId;
 		this.firstName = firstName;
@@ -73,7 +60,6 @@ public class EmployeeEntity {
 		this.fathersName = fathersName;
 		this.mothersName = mothersName;
 		this.married = married;
-		// this.dateOfBirth = dateOfBirth;
 		this.age = age;
 		this.bloodGroup = bloodGroup;
 	}

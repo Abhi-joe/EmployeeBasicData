@@ -19,10 +19,11 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "EmployeeData")
+@Table(name = "employeedata")
 public class EmployeeEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="employeeid")
 	private int empId;
 	@Column(name = "firstname")
 	private String firstName;
